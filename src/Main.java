@@ -5,13 +5,11 @@ import java.io.*;
 public class Main {
 
 
-
     public static void main(String[] args) {
 
         Player user = new Player("ユーザ");
 
         Player com = new Player("CPU");
-
 
 
         //入力指示表示
@@ -23,7 +21,6 @@ public class Main {
         System.out.println("3.パー");
 
         System.out.println("あなたの手を選択してください。>");
-
 
 
         //ユーザ入力
@@ -51,7 +48,6 @@ public class Main {
         }
 
 
-
         if (input == null) {
 
             System.out.print("1-3の値を入力してください。");
@@ -61,7 +57,6 @@ public class Main {
             return;
 
         }
-
 
 
         //ユーザの入力によりジャンケンの手をセットする
@@ -89,7 +84,6 @@ public class Main {
         }
 
 
-
 //        //以降にテストコードを追加して検証を行う
 
 //        System.out.println("テスト結果");
@@ -97,15 +91,24 @@ public class Main {
 //        System.out.println(user.getHand().getHandName());
 
 
-
         //comの手を生成
 
         com.createRandomHand();
 
         //以降にテストコードを追加して検証を行う
+        //comの手を生成
+
+        com.createRandomHand();
+
+//        //以降にテストコードを追加して検証を行う
+
+//        System.out.println("ランダムなジャンケンの手をCPUにセットする");
+
+//        System.out.println(com.getHand().getHandName());
 
 
+        //勝敗決定
 
+        int result = Game.judge(user, com);
     }
-
 }
